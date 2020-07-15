@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="506.0" prefWidth="297.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.Control">
+   <children>
+      <Pane prefHeight="506.0" prefWidth="297.0" style="-fx-background-radius: 10; -fx-background-color: #FFFFFF;" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" layoutY="113.0" prefHeight="393.0" prefWidth="297.0">
+               <children>
+                  <HBox prefHeight="38.0" prefWidth="293.0">
+                     <children>
+                        <Button fx:id="btnMemAdd" mnemonicParsing="false" onAction="#memory" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="M+" textFill="#545454">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnMemSub" mnemonicParsing="false" onAction="#memory" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="M-" textFill="#545454">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnMemRec" mnemonicParsing="false" onAction="#memory" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="MR" textFill="#545454">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnMemSav" mnemonicParsing="false" onAction="#memory" prefHeight="37.0" prefWidth="61.0" style="-fx-background-color: #FFFFFF;" text="MS" textFill="#545454">
+                           <HBox.margin>
+                              <Insets bottom="2.0" top="2.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="350.0">
+                     <children>
+                        <Button id="btnClr" fx:id="btnC" alignment="CENTER" mnemonicParsing="false" onAction="#clear" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="C" textFill="#e30b0bbf">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Consolas" size="21.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnCE" alignment="CENTER" mnemonicParsing="false" onAction="#clear" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="CE" textFill="#e30b0bbf">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Consolas" size="21.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnDark" alignment="CENTER" mnemonicParsing="false" onAction="#darkMode" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="☾" textFill="#111111d6">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="27.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Button>
+                        <Button id="btnDivid" fx:id="btnDiv" accessibleText="DIVISION" alignment="CENTER" mnemonicParsing="false" onAction="#clickOperand" prefHeight="48.0" prefWidth="60.0" style="-fx-background-color: #FFFFFF;" text="/" textFill="#e30b0bbf">
+                           <HBox.margin>
+                              <Insets bottom="2.0" top="2.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri Bold" size="17.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="350.0">
+                     <children>
+                        <Button id="7" fx:id="btn7" accessibleText="7" alignment="CENTER" mnemonicParsing="false" onAction="#clickNumber" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="7" textFill="#565656fc">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="8" fx:id="btn8" accessibleText="8" alignment="CENTER" mnemonicParsing="false" onAction="#clickNumber" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="8" textFill="#565656fc">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="9" fx:id="btn9" accessibleText="9" alignment="CENTER" mnemonicParsing="false" onAction="#clickNumber" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="9" textFill="#565656fc">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="btnMult" fx:id="btnMult" accessibleText="MULTIPLYING" alignment="CENTER" mnemonicParsing="false" onAction="#clickOperand" prefHeight="48.0" prefWidth="60.0" style="-fx-background-color: #FFFFFF;" text="*" textFill="#e50b0bbf">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="350.0">
+                     <children>
+                        <Button id="4" fx:id="btn4" accessibleText="4" alignment="CENTER" mnemonicParsing="false" onAction="#clickNumber" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="4" textFill="#565656fc">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="5" fx:id="btn5" accessibleText="5" alignment="CENTER" mnemonicParsing="false" onAction="#clickNumber" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="5" textFill="#565656fc">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="6" fx:id="btn6" accessibleText="6" alignment="CENTER" mnemonicParsing="false" onAction="#clickNumber" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="6" textFill="#565656fc">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="btnSub" fx:id="btnSub" accessibleText="SUBTRACTION" alignment="CENTER" mnemonicParsing="false" onAction="#clickOperand" prefHeight="55.0" prefWidth="60.0" style="-fx-background-color: #FFFFFF;" text="-" textFill="#e50b0bbf">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="30.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="350.0">
+                     <children>
+                        <Button id="1" fx:id="btn1" accessibleHelp="1" alignment="CENTER" mnemonicParsing="false" onAction="#clickNumber" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="1" textFill="#565656fc">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="2" fx:id="btn2" accessibleText="2" alignment="CENTER" mnemonicParsing="false" onAction="#clickNumber" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="2" textFill="#565656fc">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="3" fx:id="btn3" accessibleText="3" alignment="CENTER" mnemonicParsing="false" onAction="#clickNumber" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="3" textFill="#565656fc">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="btnSum" fx:id="btnSum" accessibleText="SUM" alignment="CENTER" mnemonicParsing="false" onAction="#clickOperand" prefHeight="48.0" prefWidth="60.0" style="-fx-background-color: #FFFFFF;" text="+" textFill="#e50b0bbf">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="25.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="350.0">
+                     <children>
+                        <Button id="." fx:id="btnDot" alignment="CENTER" mnemonicParsing="false" onAction="#clickDecimal" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="." textFill="#565656">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="22.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="0" fx:id="btn0" accessibleText="0" alignment="CENTER" mnemonicParsing="false" onAction="#clickNumber" prefHeight="71.0" prefWidth="71.0" style="-fx-background-color: #FFFFFF;" text="0" textFill="#565656fc">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnDel" alignment="CENTER" mnemonicParsing="false" onAction="#clickDel" prefHeight="68.0" prefWidth="80.0" style="-fx-background-color: #FFFFFF;" text="DEL" textFill="#e30b0bbf">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="btnResult" fx:id="btnResult" alignment="CENTER" mnemonicParsing="false" onAction="#result" prefHeight="48.0" prefWidth="50.0" style="-fx-background-color: #e50b0b; -fx-background-radius: 60;" text="=" textFill="#ffffffab">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="10.0" right="10.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri Bold" size="25.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="96.0" prefWidth="297.0">
+               <children>
+                  <TextField id="txt1" fx:id="txtMain" alignment="BOTTOM_LEFT" editable="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="85.0" prefWidth="297.0" style="-fx-background-insets: 0; -fx-text-fill: #333333;">
+                     <font>
+                        <Font name="Calibri" size="25.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lblSub" alignment="BOTTOM_LEFT" contentDisplay="TEXT_ONLY" prefHeight="26.0" prefWidth="261.0">
+                     <font>
+                        <Font name="Calibri Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
